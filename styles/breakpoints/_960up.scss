@@ -1,0 +1,43 @@
+/******************************************************************
+
+Stylesheet: 960px以上のモニタで適用
+
+******************************************************************/
+.header {
+  &__nav {
+    display: block;
+  }
+}
+
+.mobile-menu {
+  &__btn {
+    display: none;
+  }
+}
+
+// .home-content {
+//   text-align: center;
+//   margin-top: 10%;
+// }
+.home-content {
+  .page-title {
+    font-size: 5rem !important;
+  }
+  & p {
+    font-size: 2rem !important;
+  }
+}
+
+.menu-content {
+  padding-top: 10%;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 600px !important;
+}
+
+textarea {
+  width: 600px !important;
+}
+

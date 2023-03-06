@@ -1,0 +1,25 @@
+.btn {
+  position: relative;
+  display: inline-block;
+  background-color: white;
+  border: none;
+  font-weight: 600;
+  padding: 10px 40px;
+  margin: 10px auto;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: black;
+  text-decoration: none !important;
+  border-radius: 5px;
+
+  &.filled {
+    background-color: #ffe6f7;
+    color: #c689c6;
+    &:hover {
+      background-color: #c689c6;
+
+      color: #ffe6f7;
+      box-shadow: none;
+    }
+  }
+}

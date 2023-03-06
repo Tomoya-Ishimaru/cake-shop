@@ -1,0 +1,427 @@
+/******************************************************************
+
+Stylesheet: ベーススタイル
+
+******************************************************************/
+body {
+  font-family: "Kameron", "Noto Sans JP", sans-serif;
+  margin: 0;
+}
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+a {
+  text-decoration: none;
+}
+.font-sm {
+  font-size: 14px;
+}
+.font-md {
+  font-size: 17px;
+}
+.font-lr {
+  font-size: 17px;
+}
+.font-lg {
+  font-size: 25px;
+}
+.mb-sm {
+  margin-bottom: 16px !important;
+}
+.mb-lg {
+  margin-bottom: 80px !important;
+}
+.pb-sm {
+  padding-bottom: 16px !important;
+}
+.pb-lg {
+  padding-bottom: 80px !important;
+}
+.content-width {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1070px;
+}
+.main-title {
+  @extend .font-lg;
+  font-weight: 600;
+  margin-bottom: 0;
+  display: block;
+  text-shadow: 2px 2px 2px #c689c6;
+}
+.sub-title {
+  @extend .font-sm;
+  color: #535353;
+}
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+
+#main-content {
+  position: relative;
+  z-index: -2;
+  background-image: url(../images/stripe1.jpg);
+  min-height: 100vh;
+  background-color:rgba(255,255,255,0.7);
+  background-blend-mode:lighten;
+  overflow: hidden;
+}
+
+main {
+  position: relative;
+  z-index: -1;
+}
+
+#container {
+  background-color: white;
+  position: relative;
+  z-index: 10;
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+/* HHEADER
+------------------------------- */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+
+  &__nav {
+    display: none;
+  }
+
+  &__ul {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__li {
+    margin-left: 20px;
+
+    & > a {
+      color: #c689c6;
+      text-decoration: none !important;
+      text-transform: uppercase;
+    }
+  }
+
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @extend .content-width;
+  }
+}
+
+/* 大きな背景画像 */
+.big-bg {
+  background-size: cover;
+  background-position: center top;
+}
+
+.wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 4%;
+}
+
+/* モバイル版
+------------------------------- */
+
+/* HOME
+------------------------------- */
+
+#home {
+  background-image: url(../images/cake2.jpg);
+  min-height: 100vh;
+  display: flex;
+  text-align: center;
+  align-items: center;
+
+  & .home-content {
+    & .page-title {
+      text-transform: none;
+      margin: 0;
+      color: #ffe6f7;
+      text-shadow: 2px 2px 2px #c689c6;
+      font-size: 4rem;
+    }
+    & p {
+      font-size: 1.125rem;
+      margin: 20px 0 42px;
+      color: #ffe6f7;
+      text-shadow: 2px 2px 2px #c689c6;
+    }
+  }
+}
+
+/* HOME
+------------------------------- */
+#obsession{
+  @extend .content-width;
+  .professional{
+    margin: 0 auto;
+    margin-top: -100px;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    scale: 0.9;
+    img{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .profile{
+    margin-top: -150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &__left{
+      margin-top: 60px;
+      position: relative;
+      display: block;
+      height: 300px;
+      width: 100%;
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: 5px 5px 5px 0 rgba(157, 157, 157, 0.5);
+      transform: rotate(-5deg);
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 10%;
+      }
+      .name{
+        height: 20px;
+        width: 60%;
+        position: absolute;
+        bottom: 5%;
+        left: 0;
+        background-color: #f7f0f5;
+        border-radius: 0 10px 10px 0;
+        text-align: center;
+        // display: flex;
+        // align-items: center;
+        // text-align: center;
+      }
+    }
+    &__right{
+      position: relative;
+      margin-top: 80px;
+      padding: 10px;
+      display: block;
+      background-color: #f7f0f5;
+      border-radius: 20px;
+      box-shadow: 5px 5px 5px 0 rgba(157, 157, 157, 0.5);
+      transform: rotate(5deg);
+      & .ribbon-container{
+        position: absolute;
+        top: -10%;
+        right: -15%;
+        height: 80px;
+        width: 40%;
+        z-index: -5;
+        transform: rotateY(180deg) rotate(-5deg);
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          
+        }
+      }
+    }
+  }
+  .obsession{
+    // padding-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &__header{
+      &__bi{
+        font-size: larger;
+        text-shadow: 2px 2px 2px #c689c6;
+      }
+      &__azi{
+        font-size: larger;
+        text-shadow: 2px 2px 2px #c689c6;
+      }
+    }
+    &__left{
+      margin-top: 80px;
+      padding: 10px;
+      padding-bottom: 20px;
+      display: block;
+      background-color: green;
+      height: 100px;
+      width: 100%;
+      background-color: #f7f0f5;
+      border-radius: 20px;
+      box-shadow: 5px 5px 5px 0 rgba(157, 157, 157, 0.5);
+      transform: rotate(-5deg);
+      
+      & .ribbon-container{
+        position: absolute;
+        top: -10%;
+        left: -15%;
+        height: 80px;
+        width: 40%;
+        transform: rotate(-5deg);
+        z-index: -5;
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          
+        }
+      }
+    }
+    &__right{
+      margin-top: 80px;
+      display: block;
+      height: 300px;
+      width: 100%;
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: 5px 5px 5px 0 rgba(157, 157, 157, 0.5);
+      transform: rotate(5deg);
+      & .item{
+        height: 100%;
+      }
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+
+/* MENU
+------------------------------- */
+#menu {
+  position: relative;
+  overflow: hidden;
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f7f0f5;
+    z-index: -1;
+  }
+  & .page-title {
+    text-shadow: 1px 1px 1px #c689c6;
+  }
+  & .menu-content {
+    max-width: 560px;
+    padding-top: 10%;
+
+    & .page-title {
+      text-align: center;
+    }
+    & p {
+      font-size: 1.125rem;
+      margin: 10px 0 0;
+    }
+  }
+  & .grid {
+    display: grid;
+    gap: 26px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    margin-top: 6%;
+    padding-bottom: 30px;
+    // margin-bottom: 50px;
+    & .item {
+      background-color: white;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 5px 5px 5px 0 rgba(157, 157, 157, 0.5);
+      & .discrition {
+        margin: 0 8px;
+      }
+    }
+  }
+}
+
+/* CONTACT
+------------------------------- */
+#contact {
+  background-image: url(../images/happy-birthday.jpg);
+  background-position: left 25% bottom 60%;
+  background-color:rgba(255,255,255,0.8);
+  background-blend-mode:lighten;
+  width: 100%;
+  min-height: 400px;
+  position: relative;
+  padding: 100px 0;
+  
+  &-content {
+    max-width: 560px;
+    padding-top: 10%;
+    width: 70%;
+  }
+  & .page-title {
+    text-shadow: 1px 1px 1px #c689c6;
+  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  /* フォーム */
+  form div {
+    margin-bottom: 14px;
+  }
+  label {
+    font-size: 1.125rem;
+    margin-bottom: 10px;
+    display: block;
+  }
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px #fff solid;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  textarea {
+    height: 6rem;
+  }
+  input[type="submit"] {
+    border: none;
+    cursor: pointer;
+    line-height: 1;
+  }
+
+  /* フォーム */
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    max-width: 100%;
+  }
+}
